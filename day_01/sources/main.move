@@ -18,7 +18,5 @@ module challenge::day_01 {
     const IS_STUDENT: bool = false;
     // const MY_ADDRESS: address = @0x1;
     const MY_WALLET: address = @0x2;
-    // Remember: Constants must be named in UPPERCASE!
-
 }
 
