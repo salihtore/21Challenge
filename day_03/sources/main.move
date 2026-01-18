@@ -6,20 +6,30 @@
 /// 3. Write a constructor function
 
 module challenge::day_03 {
-    use std::vector;
+    use std::vector::Self;
+    //create Habit struct
+    public struct Habit has copy, drop {
+        // name field of type vector<u8>    
+        name: vector<u8>,
+        // completed field of type bool
+        completed: bool,
+    }
 
-    // TODO: Define a struct called 'Habit' with:
-    // - name: vector<u8> (we'll use String later)
-    // - completed: bool
-    // Add 'copy' and 'drop' abilities
-    // public struct Habit has copy, drop {
-    //     // Your fields here
-    // }
-
-    // TODO: Write a constructor function 'new_habit'
-    // that takes a name (vector<u8>) and returns a Habit
-    // public fun new_habit(name: vector<u8>): Habit {
-    //     // Your code here
-    // }
+    //constructor function to create new Habit
+    public fun new_habit(name: vector<u8>): Habit {
+        Habit {
+            name,
+            completed: false,
+        }
+    }   
+    #[test] 
+    fun test_new_habit(){
+        let mut empty_name = vector::empty<u8>();
+        vector::push_back(&mut empty_name, 8);
+        let mut new_habit = new_habit(empty_name);
+        assert!(new_habit.name[0] == 8, 1);
+        
+    }
 }
 
+   
