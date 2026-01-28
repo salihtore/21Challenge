@@ -60,23 +60,5 @@ module challenge::day_13 {
         };
         option::none()
     }
-
-    // TODO: Write a function 'total_reward' that:
-    // - Takes board: &TaskBoard
-    // - Returns u64 (sum of all task rewards)
-    // - Loops through all tasks and sums their rewards
-    // public fun total_reward(board: &TaskBoard): u64 {
-    //     // Your code here
-    //     // Initialize total = 0
-    //     // Loop through tasks, add each reward to total
-    // }
-
-    // TODO: Write a function 'completed_count' that:
-    // - Takes board: &TaskBoard
-    // - Returns u64 (count of completed tasks)
-    // - Loops through tasks and counts those with status == Completed
-    // public fun completed_count(board: &TaskBoard): u64 {
-    //     // Your code here
-    // }
 }
 
